@@ -91,5 +91,9 @@ for column in range(14, 19):
 # adjust the column width
 worksheet.set_column('A:J', 20)
 
+# hide columns
+for col in cols_to_hide_list:
+    worksheet.set_column(col, None, None, {'hidden': True})
+
 # save
 writer._save()
